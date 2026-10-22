@@ -1,0 +1,172 @@
+/* Contenedor principal de la aplicación */
+.app {
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Contenido del módulo de reservas */
+.gestion-reservas {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.encabezado {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.encabezado h1 {
+    margin-bottom: 10px;
+    color: #17365d;
+    font-size: 2.2rem;
+}
+
+.encabezado p {
+    color: #5d6d7e;
+    line-height: 1.6;
+}
+
+/* Formulario */
+.formulario-seccion {
+    padding: 28px;
+    margin-bottom: 35px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 7%);
+}
+
+.formulario-seccion h2,
+.lista-reservas h2 {
+    margin-top: 0;
+    color: #17365d;
+}
+
+.formulario-seccion form {
+    display: grid;
+    gap: 18px;
+}
+
+/* Campos reutilizables */
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-formulario label {
+    font-weight: 600;
+}
+
+.campo-formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+
+.campo-formulario input:focus {
+    border-color: #2563eb;
+}
+
+/* Botón reutilizable */
+.boton {
+    width: fit-content;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: #2457a7;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #173e7a;
+}
+
+/* Lista de reservas */
+.lista-reservas {
+    margin-top: 30px;
+}
+
+.reservas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de cada reserva */
+.reserva-item {
+    padding: 22px;
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 5%);
+    overflow-wrap: anywhere;
+}
+
+.reserva-item h3 {
+    margin-top: 0;
+    color: #2457a7;
+}
+
+.reserva-item p {
+    line-height: 1.6;
+}
+
+/* Estados de las reservas */
+.estado-reserva {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #e2e8f0;
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.estado-reserva.pendiente {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.estado-reserva.confirmada {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.estado-reserva.cancelada {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Mensaje cuando no existen reservas */
+.sin-reservas {
+    padding: 25px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+    .app {
+        padding: 24px 14px;
+    }
+
+    .encabezado h1 {
+        font-size: 1.8rem;
+    }
+
+    .formulario-seccion {
+        padding: 20px;
+    }
+
+    .boton {
+        width: 100%;
+    }
+}
