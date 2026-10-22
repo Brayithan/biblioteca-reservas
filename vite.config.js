@@ -1,7 +1,8 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
+// Configuración de Vite para publicar en GitHub Pages.
 export default defineConfig({
   plugins: [react()],
+  base: '/biblioteca-reservas/',
 })
